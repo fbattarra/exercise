@@ -10,6 +10,9 @@ public interface CourseRepository {
 
     Course findCourseById(String id);
 
+    List<Course> findCoursesByDuration(int daysDuration);
+
+
     Course findCourseByShortTitle(String shortTitle);
 
     void addCourse(Course c);

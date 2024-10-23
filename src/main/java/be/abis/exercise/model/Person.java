@@ -2,7 +2,7 @@ package be.abis.exercise.model;
 
 public class Person {
 
-    private int personid;
+    private int personId;
     private String firstName;
     private String lastName;
     private int age;
@@ -15,8 +15,8 @@ public class Person {
     public Person() {
     }
 
-    public Person(int personid, String firstName, String lastName, int age, String emailAddress, String password, String language, Company company) {
-        this.personid = personid;
+    public Person(int personId, String firstName, String lastName, int age, String emailAddress, String password, String language, Company company) {
+        this.personId = personId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -26,12 +26,12 @@ public class Person {
         this.company = company;
     }
 
-    public int getPersonid() {
-        return personid;
+    public int getPersonId() {
+        return personId;
     }
 
-    public void setPersonid(int personid) {
-        this.personid = personid;
+    public void setPersonId(int personId) {
+        this.personId = personId;
     }
 
     public String getFirstName() {
@@ -95,6 +95,6 @@ public class Person {
         return this.getFirstName()+" "+this.getLastName()+
                 " is "+this.getAge()+" years old and"+
                 " works for "+this.getCompany().getName()+
-                " in "+this.getCompany().getCompanyAddress().getTown();
+                " in "+this.getCompany().getAddress().getTown();
     }
 }

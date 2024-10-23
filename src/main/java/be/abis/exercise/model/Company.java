@@ -6,16 +6,16 @@ public class Company {
     private String telephoneNumber;
     private String vatNr;
 
-    private Address companyAddress;
+    private Address address;
 
     public Company() {
     }
 
-    public Company(String name, String telephoneNumber, String vatNr, Address companyAddress) {
+    public Company(String name, String telephoneNumber, String vatNr, Address address) {
         this.name = name;
         this.telephoneNumber = telephoneNumber;
         this.vatNr = vatNr;
-        this.companyAddress = companyAddress;
+        this.address = address;
     }
 
     public String getName() {
@@ -42,11 +42,11 @@ public class Company {
         this.vatNr = vatNr;
     }
 
-    public Address getCompanyAddress() {
-        return companyAddress;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setCompanyAddress(Address companyAddress) {
-        this.companyAddress = companyAddress;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }

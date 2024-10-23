@@ -1,6 +1,6 @@
-package be.abis.exercise.model;
+package be.abis.exercise.repository;
 
-import be.abis.exercise.repository.CourseRepository;
+import be.abis.exercise.model.Course;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +35,7 @@ public class MemoryCourseRepository implements CourseRepository {
 
     @Override
     public Course findCourseByShortTitle(String shortTitle) {
+        /*
         Course found = null;
         for(Course c: coursesList){
             if(c.getShortTitle().equals(shortTitle)){
@@ -43,11 +44,26 @@ public class MemoryCourseRepository implements CourseRepository {
             }
         }
         return found;
+        */
+        /*
+        List<Course> listOfCourseShortTitles = coursesList.stream()
+                .filter(c->c.getShortTitle().equals(shortTitle)).collect(Collectors.toList());
+         */
+
+        return coursesList.stream()
+                            .filter(c->c.getShortTitle().equalsIgnoreCase(shortTitle))
+                            .findFirst().orElse(null);
     }
 
     @Override
     public void addCourse(Course c) {
         this.coursesList.add(c);
+    }
+
+    public List<Course> findCoursesByDuration(int daysDuration){
+
+        return coursesList.stream().filter(c->c.getNumberOfDays()==daysDuration).toList();
+
     }
 
     @Override
