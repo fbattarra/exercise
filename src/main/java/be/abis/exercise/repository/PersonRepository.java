@@ -1,10 +1,12 @@
 package be.abis.exercise.repository;
 
 import be.abis.exercise.model.Person;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
+@Repository
 public interface PersonRepository {
 	
 	    ArrayList<Person> getAllPersons();

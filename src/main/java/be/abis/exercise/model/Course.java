@@ -1,5 +1,7 @@
 package be.abis.exercise.model;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Course {
 
     private String courseID;
@@ -58,7 +60,7 @@ public class Course {
     }
 
     public String toString(){
-        return "The "+this.getShortTitle()+" course"+
+        return "The "+ StringUtils.lowerCase(this.getShortTitle())+" course"+
                 " takes "+this.getNumberOfDays()+" days and"+
                 " costs "+this.getPricePerDay()+" per day.";
     }
