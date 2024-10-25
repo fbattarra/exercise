@@ -53,4 +53,9 @@ public class AbisCourseService implements CourseService{
     public void deleteCourse(int id) {
         courseRepository.deleteCourse(id);
     }
+
+    @Override
+    public List<Course> findAllCoursesFromDb() {
+        return courseRepository.findAllCourses();
+    }
 }

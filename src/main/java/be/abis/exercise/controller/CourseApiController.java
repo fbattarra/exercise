@@ -34,6 +34,14 @@ public class CourseApiController {
         return allCourses;
     }
 
+    // using JdbcCourseRepository
+    @GetMapping("/courses/db/list")
+    // http://localhost:8080/exercice/api/courses/db/list
+    public List<Course> findAllCoursesFromDb(){
+        List<Course> allCourses = courseService.findAllCoursesFromDb();
+        return allCourses;
+    }
+
     @PostMapping("/courses/new")
     // http://localhost:8080/exercice/api/courses/new + POST
     /*

@@ -10,6 +10,8 @@ public interface CourseService {
 
     List<Course> findAllCourses();
 
+    List<Course> findAllCoursesFromDb();
+
     Course findCourseById(String id);
 
     List<Course> findCoursesByDuration(int daysDuration);
